@@ -1,0 +1,16 @@
+Google Closure Template Javascript Compiler
+- written in javascript
+
+NOTE: this is very beta, it is nowhere near feature complete.  This is basically a proof of concept at this point.
+
+Instructions:
+$ npm install pegjs
+$ node compile.js
+
+How it works:
+You will find a PEG (Parsing Expression Grammar) file in ./peg which is responsible for parsing the closure template
+and returning a javascript data structure.  This .pegjs file can be compiled using the pegjs npm module, but for
+simplicity, I've included a compiled version in ./soyparser.js.
+
+compile.js is responsible for turning the parsed javascript data structure into javascript code.  The intention
+thus far is to not re-use google's soy.js file, but that may be reconsidered later.

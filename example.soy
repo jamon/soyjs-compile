@@ -1,0 +1,14 @@
+{namespace foo}
+/**
+ * test
+ * test2
+ * @foo blah
+ * @bar bleh
+ */
+{template .bar}
+foo bar bar
+{if $foo}yes{/if}
+{if $foo}yes{else}no{/if}
+{if $foo}yes{elseif $bar}maybe{else}no{/if}
+{print $foo /}{$bar}
+{/template} 
